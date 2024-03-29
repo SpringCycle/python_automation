@@ -1,0 +1,4 @@
+import os 
+
+word = os.replace('.','new')
+print(word)
