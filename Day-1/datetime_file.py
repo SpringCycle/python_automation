@@ -9,13 +9,11 @@ def rename_file_with_datetime(folder_path):
     
     # Get the current datetime             string_format year,month,day || hour,month,second
     current_datetime = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
-    counter = 0
 
     # Iterate over files in the folder
-    for filename in os.listdir(folder_path):
+    for index,filename in enumerate(os.listdir(folder_path)):
 
-        new_file = f"{current_datetime}_{counter}"
-        counter=counter+1
+        new_file = f"{current_datetime}_{index}"
 
         old_filename = os.path.join(folder_path, filename)
         new_filename = os.path.join(folder_path, new_file)

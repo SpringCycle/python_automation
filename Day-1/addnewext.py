@@ -14,7 +14,7 @@ def change_file_extensions(folder_path, new_extension):
         # Check if it's a file
         if os.path.isfile(file_path):
             # Split the filename and extension
-            file_name , file_extension = os.path.splitext(filename)
+            file_name = os.path.splitext(filename)
 
             # Create a new filename with the new extension
             new_filename = file_name + "." + new_extension
